@@ -1,0 +1,78 @@
+$article-columns: 9
+
+.single
+    
+    .content-inner
+        @include typecsset-space(margin-top, 1)
+            
+        @include at-breakpoint($break)
+            @include typecsset-space(margin-top, 2)
+        
+.article-content img
+    margin: 0 auto
+    display: block
+
+.article-content h2
+    @include typecsset-space(margin-top, 2)
+
+.sidebar
+    color: #999
+
+    .blog-logo, .sidebar-share-buttons
+        display: none
+    
+
+    p, .blog-logo
+        @include typecsset-space(margin-bottom, 0.75)
+    
+
+    @include at-breakpoint($break)
+        @include span-columns(3, $break)
+        position: fixed
+        max-width: $typecsset-base-font-size*typecsset-strip-units($column-width)*3
+
+        .blog-logo, .sidebar-share-buttons
+            display: block
+
+.article
+    
+    @include at-breakpoint($break)
+        @include span-columns($article-columns omega, $break)
+        @include prefix(3)
+
+
+.article-title
+    @include typecsset-font-size($typecsset-article-title-size)
+    @include typecsset-space(margin-bottom, 1)
+
+
+.article-content 
+    @include at-breakpoint($break)
+        @include span-columns(6 omega, $article-columns)
+        @include suffix(3, $article-columns)
+
+.byline
+    
+    .avatar
+        float: left
+        @include typecsset-space(padding-right, 0.25)
+    
+    .author
+        color: $grey-light
+
+
+.article-footer
+    @include at-breakpoint($break)
+        @include span-columns($article-columns omega, $article-columns)
+
+.blog-post-bottom-cta
+    @extend %cta
+    @include typecsset-space(margin-top, 1)
+    @include typecsset-space(margin-bottom, 1)
+
+    h2, p
+        @include typecsset-space(margin-bottom, 0.25)
+
+
+.blog__expand-full-width
+    margin-right: -((3*$column-width)+(2*$gutter-width))

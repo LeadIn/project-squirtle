@@ -1,0 +1,35 @@
+// Header
+
+.header
+    font-family: $sans
+    @include typecsset-space(padding-top, 1)
+    @include typecsset-space(padding-bottom, 1)
+
+    nav
+        line-height: 40px
+        
+        a + a
+            @include typecsset-space(margin-left, 1)
+
+    @include at-breakpoint($break)
+
+        #logo
+            float: left
+
+        nav
+            float: right
+    
+//footers
+
+.article-footer
+    @include typecsset-space(margin-bottom, 2)
+
+.footer
+    @include typecsset-space(margin-bottom, 2)
+    border-bottom: 1px solid $base-border-color
+
+    .hbspt-form
+        
+        @include at-breakpoint($break)
+            @include pad(3, 3, $break)
+            @include span-columns(6 omega, $break)

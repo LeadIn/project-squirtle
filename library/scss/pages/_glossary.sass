@@ -1,0 +1,23 @@
+@include at-breakpoint($break)
+    
+    .page-glossary
+            
+        header, main
+            @include pad(2, 2, $break)
+            @include span-columns(8 omega, $break)
+
+.page-glossary
+
+    header
+        text-align: center
+        border-bottom: 1px solid $base-border-color
+        @include typecsset-space(margin-bottom, 1)
+
+    h2, h3, h4
+        margin-bottom: 0
+
+    ul
+
+        li
+            @include typecsset-space(padding-left, 0.5)
+            border-left: 2px solid #eee

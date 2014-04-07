@@ -1,0 +1,20 @@
+%cta
+    @include typecsset-space(padding, 1)
+    background-color: $teal-background
+    border: 2px solid $teal
+    +border-radius(5px)
+    color: $teal-dark
+    box-sizing: border-box
+
+    h2
+        margin-top: 0
+
+.subscribe-cta
+    @extend %cta
+    @include typecsset-space(margin-bottom, 2)
+
+.cta-button
+    @extend %button 
+
+.series-intro
+    font-style: italic

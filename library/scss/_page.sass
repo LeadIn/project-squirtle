@@ -1,0 +1,137 @@
+.page, .archive, .error404,
+
+    @include at-breakpoint($break)
+        #main
+            @include span-columns(8 omega, $break)
+            @include pad(2, 2)
+
+    .page-title
+        text-align: center
+        @include typecsset-space(margin-bottom, 2)
+
+.page-header
+
+    @include at-breakpoint($break)
+        @include span-columns($break omega, $break)
+        
+        .text-column
+            @include span-columns(5, $break)
+
+        .image-column    
+            @include span-columns(7 omega, $break)
+
+        .screenshot
+            @include typecsset-space(margin-bottom, -3)
+
+.page-header, .page-section-bottom-cta
+
+    .cta-button
+        @extend %button
+        @include typecsset-space(margin-bottom, 0.5)
+
+    .secondary-cta
+        font-style: italic
+        color: $grey-light
+
+=page-section-color($color: $grey, $light-color: $grey-light)
+    border-top: 2px solid $light-color
+    
+    .page-section-header
+        color: $color
+
+.page-section
+    @include span-columns($break omega, $break)
+    @include typecsset-space(padding-top, 2.5)
+    @include typecsset-space(padding-bottom, 2.5)
+    @include page-section-color()
+    background: #fff
+    
+    .page-section-header
+        text-align: center
+        @include typecsset-space(margin-bottom, 2.5)
+
+.page-section-who
+    @include page-section-color($teal, $teal-light)
+
+    .testimonial
+    
+        &+.testimonial
+            @include at-breakpoint($break)
+                @include span-columns(6 omega, $break)
+
+        .face
+            @include typecsset-space(padding-right, 0.5)
+            width: 15%
+            float: left
+
+            @include at-breakpoint($break)
+                padding-right: 0
+
+        .name, .quote
+            @include typecsset-space(margin-bottom, 0)
+
+        .name
+            font-weight: 600
+
+        .quote
+            font-style: italic
+
+        @include at-breakpoint($break)
+            @include span-columns(6, $break)
+
+            .testimonial-content
+                float: left
+                width: 80%
+                margin-left: 5%
+
+.page-section-contact
+    @include page-section-color($blue, $blue-light)
+
+.page-section-how, .page-header-setup
+    @include typecsset-space(margin-bottom, 1)
+    
+    .step-image
+        @include typecsset-space(margin-bottom, 0.5)
+
+        &+.step-image
+            @include typecsset-space(margin-top, 0.5)
+
+    .step-title
+        @include typecsset-space(margin-bottom, 0.5)
+
+    @include at-breakpoint($break)
+        @include typecsset-space(margin-bottom, 2)
+
+        .step
+            @include span-columns(4, $break)
+
+            &:nth-child(4n)
+                @include span-columns(4 omega, $break)
+
+        .step-image
+            @include typecsset-space(margin-bottom, 1)
+            @include typecsset-space(margin-top, 0)
+            display: block
+            margin-left: auto
+            margin-right: auto
+            
+.page-section-powerups
+    @include page-section-color($teal, $teal-light)
+
+    @include at-breakpoint($break)
+
+        .powerup
+            @include span-columns(4, $break)
+            @include pad(1, 1)
+
+            &:nth-child(3n)
+                @include span-columns(4 omega, $break)
+                @include pad(1, 1)
+
+        .powerup-title
+            @include typecsset-space(margin-top, 0.5)
+            @include typecsset-space(margin-bottom, 0.5)
+
+.page-section-bottom-cta
+    @include page-section-color($orange, $orange-light)
+    text-align: center
